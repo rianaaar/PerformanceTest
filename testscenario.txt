@@ -1,4 +1,4 @@
-Scenario
+Scenario API
 1. Get all users
 verify statuscode is 200
 2. Get users by id

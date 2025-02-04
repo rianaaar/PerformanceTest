@@ -1,0 +1,19 @@
+Scenario
+1. Get all users
+verify statuscode is 200
+2. Get users by id
+verify status code is 200
+3. Add new user
+verify status code is 201
+
+Performance Test
+Scenario:
+1. Simulasikan peningkatan trafik dari 1 ke 500 pengguna selama 0,3 menit
+2. Tetap pada 500 pengguna selama 0,4 menit
+3. Simulasikan peningkatan trafik dari 500 ke 1000 pengguna selama 0,6 menit
+4. Simulasikan peningkatan ke 2000 pengguna selama 1 menit
+5. Simulasikan penurunan ke 0 pengguna selama 1,4 menit
+Expected:
+1. Rate dari http_req_failed harus bernilai kurang dari 0.001 atau 0.1%
+2. 90% request dari http_req_duration harus bernilai kurang dari 1800 millisecond
+3. Slowest request dari http_req_receiving harus selesai dalam 6000 millisecond
